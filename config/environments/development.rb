@@ -64,6 +64,10 @@ Rails.application.configure do
     'X-Frame-Options' => "ALLOW-FROM #{pf_domain}"
   }
 
+  config.web_console.whitelisted_ips = '0.0.0.0/0'
+
+  config.action_controller.forgery_protection_origin_check = false
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
