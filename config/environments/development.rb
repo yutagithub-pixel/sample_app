@@ -68,6 +68,14 @@ Rails.application.configure do
 
   config.action_controller.forgery_protection_origin_check = false
 
+  config.action_mailer.raise_delivery_errors = false
+
+  host = 'yutagithub-pixel-friendly-happiness-xjjjwpp5r59hp6rj-3000.app.github.dev'
+  # クラウドIDEの場合は以下をお使いください
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  # localhostで開発している場合は以下をお使いください
+  # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
